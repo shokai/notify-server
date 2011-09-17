@@ -11,9 +11,14 @@
       %div#head
         %h1= @title
       %div#main
-        %input{:id => 'message', :type => :text, :size => 30}
+        %input{:id => 'message', :type => :text, :size => 60, :value => 'hello'}
         %input{:id => 'btn_send', :type => :button, :value => 'send!'}
         %ul#log
+      %hr
+      %div#api
+        %h2 API
+        %ul
+          %li curl -d 'message=hello' '#{app_root}'
       %hr
       %div#foot
         %div

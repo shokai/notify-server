@@ -43,4 +43,3 @@ var log = function(msg){
     li.append($('<span>').addClass('time').html(new Date().toString()));
     $('ul#log').prepend(li);
 };
-
