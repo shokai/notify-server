@@ -7,7 +7,7 @@ Clone
 -----
 
     % git clone git://github.com/shokai/notify-server.git
-    % cd im-server
+    % cd notify-server
 
 
 Dependencies
