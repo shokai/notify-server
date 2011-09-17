@@ -7,6 +7,7 @@ require 'yaml'
 require 'json'
 require 'kconv'
 require 'xmpp4r'
+require 'rss/maker'
 require 'mongoid'
 require File.dirname(__FILE__)+'/models/im'
 

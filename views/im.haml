@@ -1,0 +1,13 @@
+!!! XHTML
+%html
+  %head
+    %title #{@im.message} - #{@title}
+  %body
+    %div#content
+      %h1= @im.message
+      %ul
+        %li
+          date : #{Time.at @im.time}
+        %li
+          from : #{@im.from}
+        

@@ -7,7 +7,8 @@ class IM
     {
       :message => message,
       :from => from,
-      :time => time
+      :time => time,
+      :id => _id
     }
   end
 end
