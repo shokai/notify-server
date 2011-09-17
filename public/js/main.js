@@ -23,10 +23,9 @@ var send_im = function(){
         dataType : 'text',
         data : {message : msg},
         success : function(res){
-            console.log(res);
             log(res);
-            $('input#message').val('');
             $('div#main input').removeAttr('disabled');
+            $('input#message').val('');
         },
         error : function(res){
             log('error('+res.status+') : '+res.responseText);
