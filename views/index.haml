@@ -34,7 +34,7 @@
             SEARCH
             %ul
               %li HTTP-GET
-              - ["#{app_root}/search/hello.rss", "#{app_root}/search/hello.json"].each do |url|
+              - ["#{app_root}/search/hello", "#{app_root}/search/hello.rss", "#{app_root}/search/hello.json"].each do |url|
                 %li
                   %a{:href => url}= url
       %hr

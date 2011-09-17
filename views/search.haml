@@ -1,0 +1,24 @@
+!!! XHTML
+%html
+  %head
+    %title= @title
+  %body
+    %div#content
+      %div#head
+        %h1= @title
+      %div#main
+        %ul
+          - @ims.each do |im|
+            %li
+              #{im.message} - 
+              %a{:href => "#{app_root}/im/#{im._id}"}= Time.at im.time
+              from #{im.from}
+      %div#foot
+        %div
+          - if @page > 1
+            %a{:href => "#{app_root}/search/#{@word}?page=#{@page-1}&per_page=#{@per_page}"} page#{@page-1}
+          - if @ims_count/@per_page+1 > @page
+            %a{:href => "#{app_root}/search/#{@word}?page=#{@page+1}&per_page=#{@per_page}"} page#{@page+1}
+        %div
+          %a{:href => app_root} top
+            

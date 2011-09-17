@@ -49,6 +49,19 @@ get '/search/*.rss' do
   rss.to_s
 end
 
+get '/search/*' do
+  @word = params[:splat].first
+  @per_page = params[:per_page].to_i
+  @per_page = @@conf['feed_max_size'] if @per_page < 1
+  @page = params[:page].to_i
+  @page = 1 if @page < 1
+  @title = "#{@@conf['title']} - search:#{@word}"
+  ims = IM.where(:message => /#{@word}/).desc(:time)
+  @ims_count = ims.count
+  @ims = ims.skip((@page-1)*@per_page).limit(@per_page)
+  haml :search
+end
+
 get '/im/:id' do
   @id = params[:id]
   begin
