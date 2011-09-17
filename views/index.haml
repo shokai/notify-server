@@ -1,0 +1,22 @@
+!!! XHTML
+%html
+  %head
+    %title= @title
+    :javascript
+      var app_root = "#{app_root}";
+    %script{:type => 'text/javascript', :src => "#{app_root}/js/jquery.js"}
+    %script{:type => 'text/javascript', :src => "#{app_root}/js/main.js"}
+  %body
+    %div#content
+      %div#head
+        %h1= @title
+      %div#main
+        %input{:id => 'message', :type => :text, :size => 30}
+        %input{:id => 'btn_send', :type => :button, :value => 'send!'}
+        %ul#log
+      %hr
+      %div#foot
+        %div
+          source code : 
+          - @src_url = 'https://github.com/shokai/im-server'
+          %a{:href => @src_url} #{@src_url}

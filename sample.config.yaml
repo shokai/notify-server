@@ -1,0 +1,12 @@
+title : 'IM Server'
+
+user : 'example@gmail.com'
+pass : 'your-gmail-passwd'
+server : 'talk.google.com'
+port : 5222
+
+to : 
+   - 'foo@gmail.com'
+   - 'bar@jabber.jp'
+
+     
