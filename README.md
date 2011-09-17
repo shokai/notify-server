@@ -1,13 +1,20 @@
-IM Server
-=========
-send xmpp/jabber.
+Notify Server
+=============
+http ---> (IM, RSS, JSON)
 
 
 Clone
 -----
 
-    % git clone git://github.com/shokai/im-server.git
+    % git clone git://github.com/shokai/notify-server.git
     % cd im-server
+
+
+Dependencies
+------------
+
+- Ruby 1.8.7
+- MongoDB 1.8+
 
 
 Install Dependencies
