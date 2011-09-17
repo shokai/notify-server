@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 get '/' do
   @title = @@conf['title']
   haml :index
