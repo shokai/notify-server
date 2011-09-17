@@ -38,3 +38,27 @@ def gtalk_send(message)
     client.send Jabber::Message.new(to, message.toutf8)
   }
 end
+
+def make_rss(im_items, title=@@conf['title'])
+  rss = RSS::Maker.make('2.0') do |rss|
+    rss.channel.about = app_root+'/rss'
+    rss.channel.title = title
+    rss.channel.description = title
+    rss.channel.link = app_root
+    rss.items.do_sort = true
+    rss.items.max_size = @@conf['feed_max_size']
+    
+    im_items.each{|im|
+      i= rss.items.new_item
+      i.title = im.message
+      i.link = "#{app_root}/im/#{im._id}"
+      i.description = "#{im.message}"
+      i.date = Time.at im.time
+    }
+  end
+  rss
+end
+
+def make_json(im_items)
+  im_items.map{|i|i.to_hash}.to_json
+end
