@@ -34,8 +34,11 @@ post
 
 get 
 
-- http://localhost:8126/rss.xml
-- http://localhost:8126/message.json
+- http://localhost:8126/rss
+- http://localhost:8126/json
+- http://localhost:8126/search/*.rss
+- http://localhost:8126/search/*.json
+
 
 Deploy
 ------

@@ -19,13 +19,22 @@
         %h2 API
         %ul
           %li
-            HTTP-POST
+            POST
             %ul
+              %li HTTP-POST
               %li curl -d 'message=hello' '#{app_root}'
           %li
-            HTTP-GET
+            LIST
             %ul
-              - ["#{app_root}/rss.xml", "#{app_root}/message.json"].each do |url|
+              %li HTTP-GET
+              - ["#{app_root}/rss", "#{app_root}/json"].each do |url|
+                %li
+                  %a{:href => url}= url
+          %li
+            SEARCH
+            %ul
+              %li HTTP-GET
+              - ["#{app_root}/search/hello.rss", "#{app_root}/search/hello.json"].each do |url|
                 %li
                   %a{:href => url}= url
       %hr
