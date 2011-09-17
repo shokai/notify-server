@@ -38,8 +38,8 @@ var send_im = function(){
 
 var log = function(msg){
     var li = $('<li>');
-    li.append($('<span>').addClass('message').html(msg));
+    li.append($('<span>').addClass('message').html(msg.escape_html()));
     li.append(' - ');
-    li.append($('<span>').addClass('time').html(new Date().toString()));
+    li.append($('<span>').addClass('time').html(new Date().toString().escape_html()));
     $('ul#log').prepend(li);
 };
