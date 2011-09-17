@@ -18,7 +18,16 @@
       %div#api
         %h2 API
         %ul
-          %li curl -d 'message=hello' '#{app_root}'
+          %li
+            HTTP-POST
+            %ul
+              %li curl -d 'message=hello' '#{app_root}'
+          %li
+            HTTP-GET
+            %ul
+              - ["#{app_root}/rss.xml", "#{app_root}/message.json"].each do |url|
+                %li
+                  %a{:href => url}= url
       %hr
       %div#foot
         %div

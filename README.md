@@ -28,7 +28,14 @@ open [http://localhost:8126](http://localhost:8126)
 API
 ---
 
+post
+
     % curl -d 'message=hello' http://localhost:8126/
+
+get 
+
+- http://localhost:8126/rss.xml
+- http://localhost:8126/message.json
 
 Deploy
 ------
