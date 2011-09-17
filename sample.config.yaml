@@ -10,3 +10,10 @@ to :
    - 'bar@jabber.jp'
 
      
+feed_max_size : 40
+
+# mongo db config
+mongo_server : '127.0.0.1'
+mongo_port : 27017
+mongo_dbname : 'im-server'
+     

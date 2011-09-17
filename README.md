@@ -24,6 +24,14 @@ Install Dependencies
     % bundle install
     
 
+Config
+------
+
+    % cp sample.config.yaml config.yaml
+
+edit config.yaml.
+
+
 Run
 ---
 
