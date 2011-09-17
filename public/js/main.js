@@ -16,6 +16,7 @@ $(function(){
 var send_im = function(){
     var msg = $('input#message').val();
     if(msg.length < 1) return;
+    $('div#main input').attr('disabled','disabled');
     $.ajax({
         type : 'POST',
         url : app_root,
@@ -25,10 +26,12 @@ var send_im = function(){
             console.log(res);
             log(res);
             $('input#message').val('');
+            $('div#main input').removeAttr('disabled');
         },
         error : function(res){
             log('error('+res.status+') : '+res.responseText);
             console.error(res);
+            $('input').removeAttr('disabled');
         }
     });
 };
