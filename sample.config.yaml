@@ -1,4 +1,5 @@
-title : 'IM Server'
+title : 'Notify Server'
+description : 'HTTP ---> IM, RSS, JSON'
 
 user : 'example@gmail.com'
 pass : 'your-gmail-passwd'

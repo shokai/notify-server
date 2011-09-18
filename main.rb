@@ -2,6 +2,7 @@
 
 before do
   @title = @@conf['title']
+  @description = @@conf['description']
 end
 
 get '/' do
